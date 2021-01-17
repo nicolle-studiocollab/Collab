@@ -10088,6 +10088,54 @@ img::-moz-selection {
   padding-bottom: 1rem;
   background-color: transparent;
 }
+
+#mainNav .navbar-brand {
+  float: left;
+}
+
+#mainNav .navbar-brand img {
+  height: 30px;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: "sofia-pro", "Open Sans", sans-serif;
+  width: 150px;
+  margin-right: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 34px;
+  text-align: left;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+#mainNav .navbar-nav .nav-item .nav-button {
+  font-family: "sofia-pro","Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 0;
+  color: #395159;
+  display: inline-block;
+  width: 128px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+}
+
+#mainNav .navbar-nav .nav-item .nav-button:hover {
+  font-weight: bold;
+  background-color: #212529;
+  color: #fff;
+  text-decoration: none;
+  border-color: white;
+}
+
+
+
+  /* Nav Bar Toggler */
 #mainNav .navbar-toggler {
   padding: 0.75rem;
   font-family: "sofia-pro","Open Sans", sans-serif;
@@ -10096,48 +10144,10 @@ img::-moz-selection {
   text-transform: uppercase;
   border: 0;
 }
-#mainNav .navbar-brand {
-  color: #fed136;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-#mainNav .navbar-brand img {
-  height: 1.5rem;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "sofia-pro", "Open Sans", sans-serif;
-  width: 200px;
-  margin-right: 30px;
-  font-size: 14px;
-  color: #fff;
-  line-height: 34px;
-  text-align: center;
-}
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
-}
 
-#mainNav .navbar-nav .nav-item .nav-button {
-  font-family: "Tiempos-Pro-Bold";
-  font-weight: bold;
-  font-size: 18px;
-  margin-right: 0;
-  color: #fff;
-  display: inline-block;
-  width: 64px;
-  text-align: center;
-  line-height: 50px;
-}
 
-#mainNav .navbar-nav .nav-item .nav-button:hover {
-  font-weight: bold;
-  background-color: grey;
-  color: #fff;
-  text-decoration: none;
-}
+/*Desktop Shrink */
+
 
 @media (min-width: 992px) {
   #mainNav {
@@ -10151,20 +10161,18 @@ img::-moz-selection {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    width: 100px;
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     background-color: #212529;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
   }
+
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
-  }
-  #mainNav.navbar-shrink .navbar-brand svg,
-#mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
   }
 
   #mainNav .navbar-nav .nav-item:last-child {
@@ -10181,15 +10189,18 @@ header.masthead {
   background: linear-gradient(180deg, #90A3A7 0%, #AB7A48 100%);
   background-attachment: scroll;
   background-size: cover;
-  height: 800px;
+  height: 100vh;
 }
 
 .masthead-box {
-  width: 590px;
+  width: 67%;
   height: 466px;
-  margin-left: 608px;
-  border: 4px solid #fff;
+  margin-left: auto;
+  border-width: 4px 4px 4px 0;
+  border-color: #fff;
+  border-style: solid;
   position: relative;
+  margin-top: 75px;
 }
 
 .masthead-box span {
@@ -10203,16 +10214,26 @@ header.masthead {
 
 
 .masthead-box .masthead-heading {
-  left: -525px;
-  padding-top: 100px;
+  left: -356px;
   font-size: 74px;
   font-weight: 700;
   line-height: 94px;
-  margin-bottom: 40px;
-  width: 834px;
   font-family: 'Tiempos-Headline-Bold', 'Times New Roman', Times, serif;
 }
 
+.masthead-box span:before{
+  margin-bottom: 15px;
+}
+.masthead-box span:after {
+  margin-top: 15px;
+}
+.masthead-box span:before , .masthead-box span:after {
+  content: ' ';
+  width: 4px;
+  background: #fff;
+  display: block;
+  height: 50%;
+}
 
 @media (min-width: 768px) {
   header.masthead {
