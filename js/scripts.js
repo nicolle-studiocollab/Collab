@@ -15,6 +15,23 @@ $(window).scroll(function() {
     }
 });
 
+/* Contact Us Form Shrinking Headlines */
+
+$(() => {
+
+    $('.form-group').each((i, e) => {
+      $('.form-control', e).
+      focus(function () {
+        e.classList.add('not-empty');
+      }).
+      blur(function () {
+        this.value === '' ? e.classList.remove('not-empty') : null;
+      });
+  
+    });
+  
+  });
+
 
 /*!
     * Start Bootstrap - Agency v6.0.3 (https://startbootstrap.com/theme/agency)
@@ -72,3 +89,4 @@ $(window).scroll(function() {
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+

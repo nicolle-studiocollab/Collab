@@ -170,6 +170,8 @@ a {
   color: #395159;
   background-color: transparent;
   text-decoration: none;
+  font-weight: 900;
+
 }
 a:hover {
   text-decoration: underline;
@@ -1977,21 +1979,6 @@ pre code {
   border: 0;
 }
 
-.form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     transition: none;
@@ -2006,11 +1993,7 @@ pre code {
   text-shadow: 0 0 0 #495057;
 }
 .form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #ffeeb5;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
 }
 .form-control::-moz-placeholder {
   color: #6c757d;
@@ -2110,6 +2093,8 @@ select.form-control[size], select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
+  font-weight: 400;
+  color: #90A3A7;
 }
 
 .form-group {
@@ -2411,7 +2396,6 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #000000;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2420,9 +2404,9 @@ textarea.form-control {
           user-select: none;
   background-color: transparent;
   border: 2px solid transparent;
-  font-size: 16px;
-  line-height: 23px;
-  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 1px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2450,18 +2434,20 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #000000;
-  border-color: #000;
+  background-color: #fff;
+  color: #395159;
 }
+
 .btn-primary:hover {
   color: #fff;
   background-color: #c4c4c4;
   font-weight: bold;
-  border-color: #000;
+  border-color: #fff;
+  background-color: transparent;
+
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #c4c4c4;
   border-color: #c4c4c4;
   box-shadow: none;
 }
@@ -9996,8 +9982,9 @@ body {
 }
 
 p {
-  line-height: 1.75;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 400;
   color: #395159;
 
 }
@@ -10063,12 +10050,12 @@ img::-moz-selection {
 }
 
 .btn-xl {
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   font-family: "sofia-pro","Open Sans", sans-serif;
-  font-size: 1.125rem;
+  font-size: 14px;
   font-weight: 700;
-  width: 300px;
+  width: 225px;
 }
 
 .btn-social {
@@ -10109,7 +10096,7 @@ img::-moz-selection {
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   font-weight: bold;
-  border-bottom: 2px solid #fff;
+  border-bottom: none;
 }
 
 #mainNav .navbar-nav .nav-item .nav-button {
@@ -10127,10 +10114,10 @@ img::-moz-selection {
 
 #mainNav .navbar-nav .nav-item .nav-button:hover {
   font-weight: bold;
-  background-color: #212529;
+  background-color: transparent;
   color: #fff;
   text-decoration: none;
-  border-color: white;
+  border: 2px solid #fff;
 }
 
 
@@ -10186,7 +10173,7 @@ header.masthead {
   padding-top: 166px;
   padding-bottom: 6rem;
   color: #fff;
-  background: linear-gradient(180deg, #90A3A7 0%, #AB7A48 100%);
+  background-image: url('../assets/img/hero-background/Afternoon_Desktop.svg');
   background-attachment: scroll;
   background-size: cover;
   height: 100vh;
@@ -10212,12 +10199,8 @@ header.masthead {
   align-items: center;
 }
 
-
 .masthead-box .masthead-heading {
-  left: -356px;
-  font-size: 74px;
   font-weight: 700;
-  line-height: 94px;
   font-family: 'Tiempos-Headline-Bold', 'Times New Roman', Times, serif;
 }
 
@@ -10235,21 +10218,57 @@ header.masthead {
   height: 50%;
 }
 
+@media (max-width: 767px) {
+  .masthead-box .masthead-heading {
+    font-size: 50px;
+    line-height: 60px;
+    left: -110px;
+    width: 225px;
+  }
+}
+
+@media (min-width: 768px) {
+  .masthead-box .masthead-heading {
+    font-size: 60px;
+    line-height: 70px;
+    left: -239px;
+    width: 482px;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead-box .masthead-heading {
+    font-size: 60px;
+    line-height: 70px;
+    left: -287px;
+    width: 578px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masthead-box .masthead-heading {
+    left: -356px;
+    font-size: 74px;
+    line-height: 84px;
+    width: 716px;
+  }
+}
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 117px;
     padding-bottom: 12.5rem;
   }
+}
 
-  header.masthead .masthead-logo {
-    margin-bottom: 25px;
-    padding-top: 117px;
+header.masthead .masthead-logo {
+  margin-bottom: 25px;
+  padding-top: 117px;
   }
 
-  header.masthead .masthead-heading {
-    margin-right: auto;
+header.masthead .masthead-heading {
+  margin-right: auto;
     
-  }
 }
 
 /* Body - General Elements */
@@ -10270,6 +10289,13 @@ hr.title-underline {
   padding-top: 40px;
   border-top: none;
   margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 54px;
+    line-height: 64px;
+  }
 }
 
 .section-copy {
@@ -10303,7 +10329,7 @@ hr.title-underline {
 /* Our Offers Section */
 
 .offer-title a {
-  font-weight: bold;
+  font-weight: 900;
   font-size: 16px;
   color: #395159;
 }
@@ -10318,7 +10344,6 @@ h3.service-number {
 }
 
 hr.favorite-projects-underline {
-  width: 94px;
   border-bottom: 3px solid #002332;
   margin-right: 0px;
   border-top: none;
@@ -10326,10 +10351,84 @@ hr.favorite-projects-underline {
   margin-top: -20px;
 }
 
+.offer-list p {
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .offer-list {
+    margin-top: 20px;
+  }
+
+  h3.service-number {
+    margin-top: 40px;
+  }
+
+  hr.favorite-projects-underline {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  hr.favorite-projects-underline {
+    width: 170px;
+  }
+  .offer-list {
+      margin-top: 20px;
+    }
+  h3.service-number {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  hr.favorite-projects-underline {
+    display: none;
+  }
+  h3.service-number {
+    margin-top: 0px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  hr.favorite-projects-underline {
+    display: block;
+    width: 94px;
+  }
+}
+
 /* How We're Different Section */
+
+@media (max-width: 767px) {
+
+  #how-were-different h3 {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  #how-were-different h3 {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  #how-were-different h3 {
+    margin-top: 0px;
+  }
+}
 
 
 /* About Us Section */
+
+#about-us .container{
+  background-image: url('../assets/img/wordmark-teal.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+}
 
 #placeholder-about-image {
   background-color: #c4c4c4;
@@ -10354,6 +10453,32 @@ hr.clients-underline {
   border-top: none;
   margin-bottom: 20px;
   margin-top: -20px;
+}
+
+p.about-bio {
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .about-overview p {
+    margin-bottom: 60px;
+  }
+  #placeholder-about-image {
+    height: 422px;
+  }
+
+  .about-detail {
+    margin-bottom: 60px;
+  }
+
+  hr.clients-underline {
+    display: none;
+  }
+
+
+
+
 }
 
 /* Connect With Us */
@@ -10400,6 +10525,93 @@ img#footer-wordmark {
   padding-top: 60px;
   width: 100%;
 }
+
+/* Contact Us Form */
+
+#contact-us-form .container {
+  margin-top: 20px;
+}
+
+#contact-us-form p{
+  color: #fff;
+  line-height: 24px;
+}
+
+#contact-us-form a{
+  color: #fff;
+  font-weight: 700;
+}
+
+.form-control {
+  border-radius: 0;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 12px;
+}
+.form-group > label {
+  font-size: 14px;
+  line-height: 24px; 
+  color: #90A3A7;
+  transform-origin: 0 0;
+  transform: scale(1.4);
+  pointer-events: none;
+  position: relative;
+  z-index: 5;
+}
+.form-group > input {
+  width: 100%;
+}
+.form-group > label {
+  transition: transform 0.4s;
+  transform-origin: 0 0;
+  transform: scale(1.4) translateY(20px);
+}
+.form-group.not-empty > label {
+  transform: none;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #90A3A7;
+  width: 100%;
+}
+.form-control,
+.form-control:focus,
+.form-control:focus:hover {
+  color: #fff;
+  font-weight: bold;
+  background: none;
+  outline: none;
+}
+.form-control:focus,
+.form-control:focus:hover {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+textarea.form-control::placeholder {
+  color: #90A3A7; 
+}
+
+textarea.form-control:focus::placeholder {
+  color: #fff;
+  font-weight: 400; 
+}
+
+#contact-us-form .project-info {
+  margin-top: 50px;
+}
+
+button#submitButton {
+  margin-top: 25px;
+}
+
 
 
 /* Other */
