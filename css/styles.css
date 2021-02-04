@@ -170,7 +170,7 @@ a {
   color: #395159;
   background-color: transparent;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 900;
 
 }
 a:hover {
@@ -10178,6 +10178,10 @@ img::-moz-selection {
 }
 
 @media (max-width: 991px) {
+  #mainNav{
+    background-color: #AB7A48;
+  }
+  
   #mainNav .navbar-nav .nav-item .nav-link {
     font-family: 'Tiempos-Headline-Bold', 'Times New Roman', Times, serif;
     font-weight: 700;
@@ -10202,17 +10206,41 @@ img::-moz-selection {
 
 /* Hero */
 header.masthead {
+
+  /*background-image: url('../assets/img/hero-background/Afternoon_Desktop.svg');*/
+}
+
+#hero-area {
+  background-color: #AB7A48;
   padding-top: 166px;
   padding-bottom: 6rem;
   color: #fff;
-  background-image: url('../assets/img/hero-background/Afternoon_Desktop.svg');
   background-attachment: scroll;
   background-size: cover;
   height: 100vh;
 }
 
+.morning {
+  background-image: url('../assets/img/hero-background/Morning_Desktop.svg');
+}
+
+.afternoon {
+  background-color: none;
+  background-image: url('../assets/img/hero-background/Afternoon_Desktop.svg');
+}
+
+.evening {
+    background-color: none;
+    background-image: url('../assets/img/hero-background/Evening_Desktop.svg');
+}
+
+.night {
+  background-color: none;
+  background-image: url('../assets/img/hero-background/Night_Desktop.svg');
+}
+
 .masthead-box {
-  width: 67%;
+  width: 58%;
   height: 466px;
   margin-left: auto;
   border-width: 4px 4px 4px 0;
@@ -10252,10 +10280,10 @@ header.masthead {
 
 @media (max-width: 767px) {
   .masthead-box .masthead-heading {
-    font-size: 50px;
-    line-height: 60px;
-    left: -110px;
-    width: 225px;
+    font-size: 40px;
+    line-height: 48px;
+    left: -142px;
+    width: 287px;
   }
 }
 
@@ -10263,8 +10291,8 @@ header.masthead {
   .masthead-box .masthead-heading {
     font-size: 60px;
     line-height: 70px;
-    left: -239px;
-    width: 482px;
+    left: -304px;
+    width: 612px;
   }
 }
 
@@ -10272,17 +10300,17 @@ header.masthead {
   .masthead-box .masthead-heading {
     font-size: 60px;
     line-height: 70px;
-    left: -287px;
-    width: 578px;
+    left: -391px;
+    width: 785px;
   }
 }
 
 @media (min-width: 1200px) {
   .masthead-box .masthead-heading {
-    left: -356px;
+    left: -466px;
     font-size: 74px;
     line-height: 84px;
-    width: 716px;
+    width: 935px;
   }
 }
 
@@ -10451,6 +10479,14 @@ hr.favorite-projects-underline {
   }
 }
 
+.principles-detail-left {
+  padding-right: 20px;
+}
+
+.principles-detail {
+  margin-bottom: 60px;
+}
+
 
 /* About Us Section */
 
@@ -10529,6 +10565,10 @@ p.client-list {
   }
 }
 
+.about-detail {
+  padding-right: 20px;
+}
+
 /* Connect With Us */
 
 #contact-us a{
@@ -10562,6 +10602,10 @@ p.client-list {
   p.contact-emails {
     width: 300px;
   }
+}
+
+.contact-us-detail {
+  padding-right: 20px;
 }
 
 /* Footer */
@@ -10660,6 +10704,17 @@ textarea.form-control:focus::placeholder {
 
 button#submitButton {
   margin-top: 25px;
+  margin-left: 10px;
+}
+
+@media (max-width: 991px) {
+  .contact-us#mainNav {
+    background-color: #002332;
+  }
+
+  .form-group > input {
+    width: 95%;
+  }
 }
 
 

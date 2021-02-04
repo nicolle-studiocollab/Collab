@@ -1,3 +1,21 @@
+$(function (){
+    var current_date = new Date();
+    var hour = current_date.getHours();
+
+    if (hour >= 5 && hour < 11) {
+        $('#hero-area').addClass('morning')
+    } else if (hour >= 11 && hour < 16) {
+        $('#hero-area').addClass('afternoon')
+    } else if (hour >= 16 && hour < 20) {
+        $('#hero-area').addClass('evening')
+    }
+    else {
+        $('#hero-area').addClass('night')
+    }
+});
+
+
+
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
     console.log("Clicked menu");
@@ -5,6 +23,7 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").fadeIn();
 
 });
+
 
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
@@ -89,4 +108,5 @@ $(() => {
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
 
