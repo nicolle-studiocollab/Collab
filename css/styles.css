@@ -10315,6 +10315,12 @@ header.masthead .masthead-heading {
     
 }
 
+@media (max-width: 767px) and (max-height: 650px) {
+  #hero-area {
+    height: 650px;
+  }
+}
+
 /* Body - General Elements */
 
 .page-section{
@@ -10474,6 +10480,16 @@ hr.favorite-projects-underline {
 .principles-detail img {
   width: 100px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .principles-detail img {
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+  .principles-detail {
+    margin-bottom: 0px;
+  }
 }
 
 
