@@ -36,7 +36,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "sofia-pro","Open Sans", sans-serif;
+  --font-family-sans-serif: "Open Sans", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -68,7 +68,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "sofia-pro","Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -387,7 +387,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 34px;
 }
 
@@ -9979,8 +9979,9 @@ body {
 }
 
 p {
-  font-size: 16px;
-  line-height: 34px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 32px;
   font-weight: 400;
   color: #395159;
 
@@ -10011,7 +10012,7 @@ p {
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  font-family: "sofia-pro", "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   margin-bottom: 15px;
   line-height: 34px;
@@ -10049,7 +10050,7 @@ img::-moz-selection {
 .btn-xl {
   padding-top: 8px;
   padding-bottom: 8px;
-  font-family: "sofia-pro","Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
   width: 225px;
@@ -10082,12 +10083,12 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "sofia-pro", "Open Sans", sans-serif;
-  width: 150px;
+  font-family: "Open Sans", sans-serif;
+  width: 160px;
   margin-right: 100px;
   font-size: 14px;
   color: #fff;
-  line-height: 34px;
+  line-height: 22px;
   text-align: left;
 }
 
@@ -10097,9 +10098,9 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-button {
-  font-family: "sofia-pro","Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   margin-right: 0;
   color: #395159;
   display: inline-block;
@@ -10159,7 +10160,7 @@ img::-moz-selection {
  /* Nav Bar Mobile */
  #mainNav .navbar-toggler {
   padding: 0.75rem;
-  font-family: "sofia-pro","Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: #fff;
   text-transform: uppercase;
@@ -10372,11 +10373,19 @@ hr.title-underline {
   
   .page-section.dark p {
     color: #90A3A7;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
   }
 
 /* Our Offers Section */
+
+#services .container{
+  background-image: url('../assets/img/wordmark-teal.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+}
 
 .offer-title a {
   font-weight: 900;
@@ -10496,10 +10505,6 @@ hr.favorite-projects-underline {
 /* About Us Section */
 
 #about-us .container{
-  background-image: url('../assets/img/wordmark-teal.svg');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  padding-bottom: 100px;
   margin-bottom: 50px;
 }
 
@@ -10614,8 +10619,7 @@ p.client-list {
 /* Footer */
 
 .footer-border {
-  border-top: 1px solid #395159;
-  padding-top: 120px;
+  border: none;
 }
 
 img#footer-wordmark {
